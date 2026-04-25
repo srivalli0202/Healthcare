@@ -1,0 +1,11 @@
+patient_id,first_name,last_name,gender,date_of_birth,age,created_at,updated_at
+P001,John,Smith,M,1979-05-14,45,2024-01-01,2024-01-01
+P002,Sarah,Johnson,F,1992-08-22,32,2024-01-01,2024-01-01
+P003,Michael,Williams,M,1957-11-03,67,2024-01-01,2024-01-01
+P004,Emily,Brown,F,1995-02-17,29,2024-01-01,2024-01-01
+P005,David,Jones,M,1970-09-09,54,2024-01-01,2024-01-01
+P006,Linda,Miller,F,1983-04-12,41,2024-01-01,2024-01-01
+P007,Robert,Davis,M,1951-07-28,73,2024-01-01,2024-01-01
+P008,Jessica,Garcia,F,1988-03-05,36,2024-01-01,2024-01-01
+P009,Thomas,Martinez,M,1966-12-19,58,2024-01-01,2024-01-01
+P010,Ashley,Rodriguez,F,1998-06-30,26,2024-01-01,2024-01-01

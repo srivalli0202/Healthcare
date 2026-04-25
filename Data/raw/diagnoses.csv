@@ -1,0 +1,11 @@
+diagnosis_id,patient_id,diagnosis_code,diagnosis_desc,diagnosis_date
+D001,P001,E11.9,Type 2 Diabetes Mellitus,2024-01-12
+D002,P002,I10,Essential Hypertension,2024-02-05
+D003,P003,I25.10,Heart Disease,2024-03-18
+D004,P004,J45.909,Asthma Unspecified,2024-01-25
+D005,P005,E11.9,Type 2 Diabetes Mellitus,2024-02-14
+D006,P006,I10,Essential Hypertension,2024-03-02
+D007,P007,I25.10,Heart Disease,2024-01-30
+D008,P008,J45.909,Asthma Unspecified,2024-03-11
+D009,P009,E11.9,Type 2 Diabetes Mellitus,2024-02-22
+D010,P010,J45.909,Asthma Unspecified,2024-03-19

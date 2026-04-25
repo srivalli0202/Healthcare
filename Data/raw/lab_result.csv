@@ -1,0 +1,11 @@
+lab_id,patient_id,test_name,test_value,unit,test_date,reference_range,abnormal_flag
+L001,P001,Glucose,145.2,mg/dL,2024-01-12,70-140,Y
+L002,P002,Blood Pressure,132.5,mmHg,2024-02-05,90-120,Y
+L003,P003,Cholesterol,168.9,mg/dL,2024-03-18,<200,N
+L004,P004,Glucose,110.4,mg/dL,2024-01-25,70-140,N
+L005,P005,Glucose,152.7,mg/dL,2024-02-14,70-140,Y
+L006,P006,Blood Pressure,139.1,mmHg,2024-03-02,90-120,Y
+L007,P007,Cholesterol,175.3,mg/dL,2024-01-30,<200,N
+L008,P008,Glucose,118.6,mg/dL,2024-03-11,70-140,N
+L009,P009,Glucose,160.2,mg/dL,2024-02-22,70-140,Y
+L010,P010,Glucose,105.9,mg/dL,2024-03-19,70-140,N
