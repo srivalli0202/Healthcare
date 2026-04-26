@@ -10,6 +10,29 @@ This project implementations an end-to-end data engineering pipeline in Databric
 
 **-Gold (Analytics)**: High level aggregates are created to identify high risk patients and top clinic diagnoses.
 
+### **Data Flow Diagram**
+
+graph TD
+    subgraph "External Data"
+        A[patient.csv]
+        B[lab_result.csv]
+        C[diagnoses.csv]
+    end
+
+    subgraph "Databricks Unity Catalog"
+        D[(Bronze Volume: raw_files)]
+        E[(Silver Schema: Cleaned)]
+        F[(Gold Schema: Analytics)]
+    end
+
+    A & B & C -->|Ingest| D
+    D -->|Transform & Join| E
+    E -->|Aggregate KPIs| F
+
+    style D fill:#f96,stroke:#333,stroke-width:2px
+    style E fill:#69f,stroke:#333,stroke-width:2px
+    style F fill:#9f6,stroke:#333,stroke-width:2px
+
 **Tech Stack**
 
 **-Platform:** Databricks (Unity Catalog).
@@ -25,5 +48,4 @@ This project implementations an end-to-end data engineering pipeline in Databric
 
 -sql/**folder:** Any extra SQL scripts you used for manual verification.
 
-### **Data Flow Diagram**
 
