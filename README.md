@@ -10,30 +10,33 @@ This project implementations an end-to-end data engineering pipeline in Databric
 
 **-Gold (Analytics)**: High level aggregates are created to identify high risk patients and top clinic diagnoses.
 
-### **Data Flow Diagram**
+### **Data Flow Architecture**
 
-graph TD
-    subgraph "External Data"
-        A[patient.csv]
-        B[lab_result.csv]
-        C[diagnoses.csv]
-    end
+```text
+[   patient.csv   ]  [ lab_result.csv ]  [ diagnoses.csv ]
+           |                   |                 |
+           V                   V                 V
+-------------------------------------------------------
+|                1. BRONZE (Ingest)                   |
+| (Files to raw Delta Tables in Unity Catalog Volume) |
+-------------------------------------------------------
+                           |
+                           V
+-------------------------------------------------------
+|               2. SILVER (Transform)                 |
+| (Clean Dates, Join Tables, Apply Abnormal Flags)    |
+|       Result: unified_patient_health_record        |
+-------------------------------------------------------
+                           |
+                           V
+-------------------------------------------------------
+|                3. GOLD (Analytics)                  |
+| (Aggregates KPIs: high_risk_patients, top_diagnoses)|
+-------------------------------------------------------
 
-    subgraph "Databricks Unity Catalog"
-        D[(Bronze Volume: raw_files)]
-        E[(Silver Schema: Cleaned)]
-        F[(Gold Schema: Analytics)]
-    end
+```
 
-    A & B & C -->|Ingest| D
-    D -->|Transform & Join| E
-    E -->|Aggregate KPIs| F
-
-    style D fill:#f96,stroke:#333,stroke-width:2px
-    style E fill:#69f,stroke:#333,stroke-width:2px
-    style F fill:#9f6,stroke:#333,stroke-width:2px
-
-**Tech Stack**
+###**Tech Stack**
 
 **-Platform:** Databricks (Unity Catalog).
 **-Language:** PySpark(Python) and Spark SQL.
@@ -47,5 +50,6 @@ graph TD
 -data/**folder:** Contains your raw CSV samples(optional, as they are already in your Volume).
 
 -sql/**folder:** Any extra SQL scripts you used for manual verification.
+
 
 
