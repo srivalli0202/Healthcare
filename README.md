@@ -39,8 +39,11 @@ This project implementations an end-to-end data engineering pipeline in Databric
 ###**Tech Stack**
 
 **-Platform:** Databricks (Unity Catalog).
+
 **-Language:** PySpark(Python) and Spark SQL.
+
 **-Storage:** Delta Lake.
+
 **-Version Control:** GitHub Integration.
 
 ### **Workspace Folders**
